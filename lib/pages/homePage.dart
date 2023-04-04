@@ -8,6 +8,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:travel_app/components/heading.dart';
+import 'package:travel_app/components/search.dart';
 import 'package:travel_app/utils/styles.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,12 +22,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: background,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(left: medium, top: 50, right: medium),
           child: Column(
-            children: const [
-              HeadingSection(),
+            children: [
+              const HeadingSection(),
+              SizedBox(
+                height: medium,
+              ),
+              const SearchSection(),
             ],
           ),
         ),
