@@ -7,25 +7,22 @@
 // ------------------------------------------------------------------ -->
 
 import 'package:flutter/material.dart';
-import 'package:travel_app/components/heading.dart';
-import 'package:travel_app/components/labelSection.dart';
-import 'package:travel_app/components/recommended.dart';
-import 'package:travel_app/components/search.dart';
-import 'package:travel_app/components/topDestinations.dart';
-import 'package:travel_app/pages/explorePage.dart';
+import 'package:travel_app/pages/homePage.dart';
 import 'package:travel_app/pages/favoritesPage.dart';
 import 'package:travel_app/pages/profilePage.dart';
 import 'package:travel_app/utils/styles.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class ExplorePage extends StatefulWidget {
+  const ExplorePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ExplorePage> createState() => _ExplorePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  int _currentIndex = 0;
+class _ExplorePageState extends State<ExplorePage> {
+  // int _selectedIndex = 1;
+
+  int _currentIndex = 1;
 
   final List<Widget> _children = [
     const HomePage(),
@@ -59,33 +56,9 @@ class _HomePageState extends State<HomePage> {
             // child: Expanded(
             child: Column(
               children: [
-                const HeadingSection(),
-                SizedBox(
-                  height: small,
-                ),
-                const SearchSection(),
-                SizedBox(
-                  height: medium,
-                ),
-                LabelSection(
-                  labelText: 'Recommended',
-                  style: heading1,
-                ),
-                SizedBox(
-                  height: small,
-                ),
-                const Recommended(),
-                SizedBox(
-                  height: medium,
-                ),
-                LabelSection(labelText: 'Top Destinations', style: heading2),
-                SizedBox(
-                  height: small,
-                ),
-                const TopDestinations(),
+                Text('This is the explore page'),
               ],
             ),
-            // ),
           ),
         ),
       ),
