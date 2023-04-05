@@ -7,7 +7,7 @@
 // ------------------------------------------------------------------ -->
 
 import 'package:flutter/material.dart';
-import 'package:travel_app/pages/HomePage.dart';
+import 'package:travel_app/pages/homePage.dart';
 
 void main() {
   runApp(const MyApp());

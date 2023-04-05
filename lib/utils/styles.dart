@@ -13,7 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 var accent = const Color(0xFF18A5FD);
 var accentLight = const Color(0xFF66ACE9);
 var heading = const Color(0xFF0F1641);
-var text = const Color(0xFFAAAAAAA);
+var text = const Color(0xFFAAAAAA);
 var icon = const Color(0xFFB8BCCB);
 var background = const Color(0xFFF8FAF8);
 var white = const Color(0xFFFFFFFF);
@@ -30,7 +30,8 @@ TextStyle pBold = GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.w700,
 TextStyle p1 = GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color: text);
 TextStyle p2 = GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w400, color: text);
 TextStyle p3 = GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w400, color: text);
-TextStyle pLocation = GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w400, color: text);
+TextStyle pLocation = GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w400, color: white);
+TextStyle pPrice = GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w400, color: white);
 
 // Gap
 var medium = 50.0;

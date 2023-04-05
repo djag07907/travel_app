@@ -8,6 +8,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:travel_app/components/heading.dart';
+import 'package:travel_app/components/labelSection.dart';
+import 'package:travel_app/components/recommended.dart';
 import 'package:travel_app/components/search.dart';
 import 'package:travel_app/utils/styles.dart';
 
@@ -30,9 +32,24 @@ class _HomePageState extends State<HomePage> {
             children: [
               const HeadingSection(),
               SizedBox(
-                height: medium,
+                height: small,
               ),
               const SearchSection(),
+              SizedBox(
+                height: medium,
+              ),
+              LabelSection(
+                labelText: 'Recommended',
+                style: heading1,
+              ),
+              SizedBox(
+                height: medium,
+              ),
+              const Recommended(),
+              SizedBox(
+                height: medium,
+              ),
+              LabelSection(labelText: 'Top Destinations', style: heading2)
             ],
           ),
         ),
