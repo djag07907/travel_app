@@ -11,6 +11,7 @@ import 'package:travel_app/components/heading.dart';
 import 'package:travel_app/components/labelSection.dart';
 import 'package:travel_app/components/recommended.dart';
 import 'package:travel_app/components/search.dart';
+import 'package:travel_app/components/topDestinations.dart';
 import 'package:travel_app/utils/styles.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,32 +27,76 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: background,
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.only(left: medium, top: 50, right: medium),
-          child: Column(
-            children: [
-              const HeadingSection(),
-              SizedBox(
-                height: small,
-              ),
-              const SearchSection(),
-              SizedBox(
-                height: medium,
-              ),
-              LabelSection(
-                labelText: 'Recommended',
-                style: heading1,
-              ),
-              SizedBox(
-                height: medium,
-              ),
-              const Recommended(),
-              SizedBox(
-                height: medium,
-              ),
-              LabelSection(labelText: 'Top Destinations', style: heading2)
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.only(left: medium, top: 50, right: medium),
+            // child: Expanded(
+            child: Column(
+              children: [
+                const HeadingSection(),
+                SizedBox(
+                  height: small,
+                ),
+                const SearchSection(),
+                SizedBox(
+                  height: medium,
+                ),
+                LabelSection(
+                  labelText: 'Recommended',
+                  style: heading1,
+                ),
+                SizedBox(
+                  height: small,
+                ),
+                const Recommended(),
+                SizedBox(
+                  height: medium,
+                ),
+                LabelSection(labelText: 'Top Destinations', style: heading2),
+                SizedBox(
+                  height: small,
+                ),
+                const TopDestinations(),
+              ],
+            ),
+            // ),
           ),
+        ),
+      ),
+      bottomNavigationBar: SizedBox(
+        height: 100,
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          elevation: 0,
+          selectedItemColor: accent,
+          unselectedItemColor: icon,
+          backgroundColor: white,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.explore,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.bookmark,
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+              ),
+              label: '',
+            ),
+          ],
         ),
       ),
     );

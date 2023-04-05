@@ -7,11 +7,11 @@
 // ------------------------------------------------------------------ -->
 
 import 'package:flutter/material.dart';
-import 'package:travel_app/components/cardRecommended.dart';
+import 'package:travel_app/components/cartTopRecommendations.dart';
 import 'package:travel_app/models/destination.dart';
 
-class Recommended extends StatelessWidget {
-  const Recommended({super.key});
+class TopDestinations extends StatelessWidget {
+  const TopDestinations({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +22,16 @@ class Recommended extends StatelessWidget {
       Destination('assets/images/arc.jpg', 'Itsukushima Shrine', '120', 'Itsukushima - JP'),
     ];
     return SizedBox(
-      height: 250,
+      height: 75,
       child: ListView.builder(
-        shrinkWrap: true,
         physics: const BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
         itemCount: destinations.length,
         itemBuilder: (context, index) {
           var dest = destinations[index];
-          return CardRecommended(
-              image: dest.image, name: dest.name, price: dest.price, location: dest.location);
+          return CardTopRecommendations(
+              name: dest.name, location: dest.location, image: dest.image);
         },
+        scrollDirection: Axis.horizontal,
       ),
     );
   }
