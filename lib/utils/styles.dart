@@ -10,12 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Colors
-var accent = const Color(0xFF18A5FD);
-var accentLight = const Color(0xFF66ACE9);
+var accent = const Color(0xFF01AFD1);
+var accentLight = const Color(0xFF7DBAFB);
 var heading = const Color(0xFF0F1641);
 var text = const Color(0xFFAAAAAA);
 var icon = const Color(0xFFB8BCCB);
-var background = const Color(0xFFF8FAF8);
+var background = const Color(0xFFDBE5FF);
 var white = const Color(0xFFFFFFFF);
 var black = const Color(0xFF000000);
 

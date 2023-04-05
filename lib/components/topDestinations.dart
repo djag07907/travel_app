@@ -16,10 +16,12 @@ class TopDestinations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Destination> destinations = [
-      Destination('assets/images/palace.jpg', 'Osaka Castle', '120', 'Ohsaka - JP'),
-      Destination('assets/images/temple.jpg', 'Matsumoto Castle', '120', 'Nagano - JP'),
-      Destination('assets/images/arcs.jpg', 'Torii Gate', '120', 'Lake Tzakawa - JP'),
-      Destination('assets/images/arc.jpg', 'Itsukushima Shrine', '120', 'Itsukushima - JP'),
+      Destination('assets/images/osaka_castle.jpg', 'Osaka Castle', '120', 'Ohsaka - JP'),
+      Destination('assets/images/matsumoto_castle.jpg', 'Matsumoto Castle', '120', 'Nagano - JP'),
+      Destination(
+          'assets/images/toriigate_laketzakawa.jpg', 'Torii Gate', '120', 'Lake Tzakawa - JP'),
+      Destination(
+          'assets/images/itsukushima_shrine.jpg', 'Itsukushima Shrine', '120', 'Itsukushima - JP'),
     ];
     return SizedBox(
       height: 75,

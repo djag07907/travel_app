@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: background,
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Padding(
             padding: EdgeInsets.only(left: medium, top: 50, right: medium),
             // child: Expanded(
@@ -71,6 +72,7 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: accent,
           unselectedItemColor: icon,
           backgroundColor: white,
+          iconSize: 35,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(

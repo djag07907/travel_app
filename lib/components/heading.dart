@@ -37,7 +37,7 @@ class HeadingSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Welcome',
+                  'Welcome,',
                   style: p1,
                 ),
                 Text(
