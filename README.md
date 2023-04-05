@@ -1,10 +1,12 @@
 # travel_app
 
-A new Flutter project.
+A new Flutter project demo of a Travel App TBN.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+
+Big shout out to `[Arya Wijaya Kusuma](https://dribbble.com/shots/15793197-Travel-App)` for the design concept.
 
 A few resources to get you started if this is your first Flutter project:
 
