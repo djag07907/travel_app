@@ -6,7 +6,7 @@ A new Flutter project demo of a Travel App TBN.
 
 This project is a starting point for a Flutter application.
 
-A big shout out to <a href="https://dribbble.com/shots/15793197-Travel-App">Arya Wijaya Kusuma</a> for the base design concept in which this app was made.
+A big shout out to <a href="https://dribbble.com/shots/15793197-Travel-App">Arya Wijaya Kusuma</a> for the base design concept in which this app was made and <a href="https://github.com/Spellthorn">Spellthorn</a> for the clean code architecture.
 
 A few resources to get you started if this is your first Flutter project:
 
