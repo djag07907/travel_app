@@ -7,6 +7,9 @@
 // ------------------------------------------------------------------ -->
 
 import 'package:flutter/material.dart';
+import 'package:travel_app/components/destinations.dart';
+import 'package:travel_app/components/search.dart';
+import 'package:travel_app/models/destination.dart';
 import 'package:travel_app/pages/homePage.dart';
 import 'package:travel_app/pages/favoritesPage.dart';
 import 'package:travel_app/pages/profilePage.dart';
@@ -52,11 +55,66 @@ class _ExplorePageState extends State<ExplorePage> {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Padding(
-            padding: EdgeInsets.only(left: medium, top: 50, right: medium),
+            padding: EdgeInsets.only(
+              left: medium,
+              top: 50,
+              right: medium,
+            ),
             // child: Expanded(
             child: Column(
               children: [
-                Text('This is the explore page'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text(
+                        'Search a destination',
+                        style: heading1,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: small,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        cursorColor: accent,
+                        style: p1,
+                        decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.search, size: 32, color: text),
+                          hintText: 'Search destination',
+                          hintStyle: p1,
+                          fillColor: white,
+                          filled: true,
+                          contentPadding: EdgeInsets.symmetric(vertical: small),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: small,
+                    ),
+                    Container(
+                      decoration:
+                          BoxDecoration(color: accent, borderRadius: BorderRadius.circular(12)),
+                      height: 50,
+                      width: 50,
+                      child: Icon(Icons.swap_horiz, color: white),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: small,
+                ),
+                Column(
+                  children: const [ExploreDestinations()],
+                ),
               ],
             ),
           ),

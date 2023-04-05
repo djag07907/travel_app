@@ -6,7 +6,10 @@
 // @details
 // ------------------------------------------------------------------ -->
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:travel_app/pages/explorePage.dart';
 import 'package:travel_app/pages/favoritesPage.dart';
 import 'package:travel_app/pages/homePage.dart';
@@ -44,6 +47,15 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
+  File? _imageFile;
+
+  void _chooseImage() async {
+    final pickedFile = await ImagePicker().getImage(source: ImageSource.gallery);
+    setState(() {
+      _imageFile = pickedFile != null ? File(pickedFile.path) : null;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +68,127 @@ class _ProfilePageState extends State<ProfilePage> {
             // child: Expanded(
             child: Column(
               children: [
-                Text('This is the profile page'),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 150,
+                      height: 150,
+                      child: GestureDetector(
+                        onTap: _chooseImage,
+                        child: CircleAvatar(
+                          radius: 80.0,
+                          backgroundImage: _imageFile != null
+                              ? FileImage(_imageFile!)
+                              : const AssetImage('assets/images/user.png') as ImageProvider,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: small,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Daniel Alvarez',
+                          style: heading1,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: medium),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text('My Information', style: heading1),
+                    ),
+                    SizedBox(
+                      width: small,
+                    ),
+                    SizedBox(
+                      height: 50,
+                      width: 50,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Icon(
+                            Icons.edit,
+                            color: icon,
+                            size: 28,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: medium,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          'Username: ',
+                          style: heading3,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: medium,
+                    ),
+                    Column(
+                      children: [
+                        Text('Daniel Alvarez', style: p1),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: small,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        Text('Email: ', style: heading3),
+                      ],
+                    ),
+                    SizedBox(
+                      width: medium,
+                    ),
+                    Column(
+                      children: [
+                        Text('josamogax@gmail.com', style: p1),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: small,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        Text('Bio: ', style: heading3),
+                      ],
+                    ),
+                    SizedBox(
+                      width: medium,
+                    ),
+                    Column(
+                      children: [
+                        Text('I am a Software Developer!', style: p1),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
