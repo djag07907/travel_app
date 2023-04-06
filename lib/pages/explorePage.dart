@@ -85,7 +85,7 @@ class _ExplorePageState extends State<ExplorePage> {
                         style: p1,
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.search, size: 32, color: text),
-                          hintText: 'Search destination',
+                          hintText: 'Location or country name',
                           hintStyle: p1,
                           fillColor: white,
                           filled: true,
